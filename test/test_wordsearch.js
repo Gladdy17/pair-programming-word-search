@@ -35,4 +35,32 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+   it("should return false if the array is empty", function() {
+    const result = wordSearch ([['']],'');
+    console.log(Array.isArray(result));
+    console.log(result.length === 0);
+    // const result = [[]];
+    // assert.strictEqual (wordSearch(result, 'word'), false);
+
+
+    assert.isTrue(result);
+  });
+
+
+  it("should return false if word is only vertical", function() {
+    const result = wordSearch([
+      ['A'],
+      ['S'],
+      ['Y'],
+      ['H'],
+      ['W'],
+      ['B'],
+      ['U'],
+      ['O'],
+      ['E'],
+    ], 'S')
+
+    assert.isTrue(result);
+  });
+
 });
